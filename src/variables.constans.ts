@@ -1,0 +1,1 @@
+export const folderPath = 'C:\\Test_@\\playwright\\Test_@playwrightSchreenshot-report\\';
