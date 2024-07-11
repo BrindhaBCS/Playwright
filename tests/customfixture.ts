@@ -15,4 +15,5 @@ const test = base.extend<{ screenshotPath: string }>({
   },
 });
 
+
 export { test };
