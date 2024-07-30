@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import  dotenv from 'dotenv';
 import path from 'path';
-// import path from 'path';
+// import {OrtoniReportConfig} from "ortoni-report";
 dotenv.config();
 // dotenv.config({ path: path.resolve(__dirname, '../env/', 'variOne.env') });
 
@@ -11,10 +11,10 @@ dotenv.config();
 
 
 if (!process.env.NODE_ENV) {
-  dotenv.config({ path: path.join(__dirname, 'src','.env') });
+  dotenv.config({ path: path.join(__dirname, 'src', '.env') });
 }
 else {
-  dotenv.config({ path: path.join(__dirname, 'src',`.env.${process.env.NODE_ENV}`) });
+  dotenv.config({ path: path.join(__dirname, 'src',  `.env.${process.env.NODE_ENV}`) });
 }
  
 
@@ -27,8 +27,8 @@ else {
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-const screenshotpath = process.env.Screenshot_path || './tests/screenshots';
-const reportPath = process.env.report_path || './tests/reports';
+const screenshotpath = process.env.Screenshot_path || 'C:/Playwright/Playwright/screenshotDir';
+const reportPath = process.env.report_path || 'C:/Playwright/Playwright/reports';
 
 export default defineConfig({
   testDir: './tests',
@@ -43,6 +43,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  timeout: 120000,
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
@@ -104,6 +105,15 @@ export default defineConfig({
     // ['html', { outputFolder: 'playwright-report', open: 'never' }],
     // ['./Report.ts'],
     ['html', { outputFolder:reportPath }],
+    ["json", {outputFile: "jsonreports/jsonreport.json"}],
   ],
+  // reporter: [
+  //   ['list'],
+  //   // ['html', { outputFolder: 'playwright-report', open: 'never' }],
+  //   // ['./Report.ts'],
+  //   ['html', { outputFolder:"C:/playwright/reports" }],
+  //   ["json", {outputFile: path.join(reportPath,'jsonreport.json')}],
+  //   ["ortoni-report",{outputFile: path.join(reportPath,'ortoni-report.html')} ],
+  // ],
 
 });
