@@ -104,8 +104,8 @@ export default defineConfig({
     ['list'],
     // ['html', { outputFolder: 'playwright-report', open: 'never' }],
     // ['./Report.ts'],
-    ['html', { outputFolder:reportPath }],
-    ["json", {outputFile: "jsonreports/jsonreport.json"}],
+    // ['html', { outputFolder:reportPath }],
+    // ["json", {outputFile: "jsonreports/jsonreport.json"}],
   ],
   // reporter: [
   //   ['list'],

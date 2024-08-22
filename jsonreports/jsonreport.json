@@ -61,8 +61,8 @@
   },
   "suites": [
     {
-      "title": "Test_Screenshot.spec.ts",
-      "file": "Test_Screenshot.spec.ts",
+      "title": "git_test.spec.ts",
+      "file": "git_test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
@@ -81,20 +81,20 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 19241,
+                  "duration": 18961,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-07-29T09:59:27.821Z",
+                  "startTime": "2024-07-30T07:23:06.041Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "3ad86aa42d39395e1606-7c08676be6fb523a84cb",
-          "file": "Test_Screenshot.spec.ts",
+          "id": "da5ab5813d23a22472d9-c3ac48916680e0e5c1d0",
+          "file": "git_test.spec.ts",
           "line": 23,
           "column": 5
         }
@@ -103,8 +103,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-07-29T09:59:27.106Z",
-    "duration": 23547.275999999998,
+    "startTime": "2024-07-30T07:23:05.462Z",
+    "duration": 22905.829,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
