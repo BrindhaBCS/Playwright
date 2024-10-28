@@ -9,13 +9,13 @@ test.beforeAll(async ({ browser }) => {
   await page.goto('https://qa.symphony4cloud.com/login');
   await page.fill('#customer_code', 'c100001');
   await page.fill('#user_name', 'selenium_user');
-  await page.fill('#password', 'Seleqa@123'); 
+  await page.fill('#password', 'Zb*5@!I*'); 
   await page.click('//button[@type="submit"]');
 });
 
 test.afterAll(async () => {
   await page.goto('https://qa.symphony4cloud.com/dashboard');
-  await page.click("(//button[@type='button'])[3]");
+  await page.click("(//button[@type='button'])[4]");
   await page.click("//li[text()='Log Out']");
   await page.close(); // Close the page after tests
 });
